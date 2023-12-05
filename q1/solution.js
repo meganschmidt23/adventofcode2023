@@ -15,11 +15,12 @@ console.log(numbers)
 for (let i = 0; i < numbers.length; i++) {
   let a = 0;
   if (numbers[i].length > 1){
-    a = Number(numbers[i].charAt(0) + numbers[i].charAt(numbers[i].length))
-    sum= sum + a
+    a = Number(numbers[i].charAt(0) + numbers[i].charAt(numbers[i].length-1))
+    numbers[i] = a
   }
   else {
-    sum = Number(numbers[i]+numbers[i]) + sum;
+    numbers[i]= Number(numbers[i].toString() +numbers[i].toString());
   }
+  sum = sum + numbers[i]
 }
 console.log(sum)
